@@ -1,5 +1,5 @@
 # SmileRatingDialog
-![alt text](https://raw.githubusercontent.com/vickyKDV/SmileRatingDialog/master/RatingDialog.gif)
+![alt text](https://raw.githubusercontent.com/CASH-IT-Developer/smileratingdialog/master/RatingDialog.gif)
 
 # Library Rating dialog dan BottomSheet Dialog dengan animasi Smile
 
