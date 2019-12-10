@@ -3,10 +3,10 @@
 
 # Library Rating dialog dan BottomSheet Dialog dengan animasi Smile
 
-Cara implementasi
+How to implementasi
    
    
-   Set pada build.gradle application
+   Add in build.gradle application
    
      allprojects {
           repositories {
@@ -22,7 +22,7 @@ Cara implementasi
     dependencies {
         ...
         ...
-        implementation 'com.github.vickykdv:SmileRatingDialog:1.0'
+        implementation 'com.github.CASH-IT-Developer:SmileRatingDialog:1.0'
     }
 
 
@@ -49,13 +49,13 @@ Cara implementasi
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                             
-                                 //centerRating.getKomentar() = adalah value dari callback komentar yang diisi
+                                 //centerRating.getKomentar() ( value from callback komentar )
                                 Log.d("MainActivity", "Komentar: "+centerRating.getKomentar());
                                 
-                                //centerRating.getRating() = adalah value dari callback rating yang diberikan
+                                //centerRating.getRating() = value from callback rating your set
                                 Log.d("MainActivity", "Rating: "+centerRating.getRating());
                                 
-                                //Menutup Dialog
+                                //Close Dialog
                                 dialogInterface.dismiss();
                             }
                         })
@@ -63,20 +63,20 @@ Cara implementasi
                             @Override
                             public void onClick(DialogInterface dialogInterface, int which) {
                             
-                                 //Menutup Dialog
+                                 //Close Dialog
                                 dialogInterface.dismiss();
                             }
                         })
                         .build();
                 centerRating.show();
                 
- Cara menggunakan BottomSheet Rating pada class actvity / fragment
+ How to user BottomSheet Rating in class actvity or fragment
         
-        //Buat Variable Global pada class activity
+        //Create Variable Global pada class activity
        
             private BottomSheetRating bottomSheetRating;
         
-        //Initial dan setup pada event OnClick
+        //Initial and setup from event OnClick
                 bottomSheetRating = new BottomSheetRating.Builder(DashboardActivity.this)
                         //Set Title / Judul Dialog
                         .setTitle("Beri Rating")
@@ -84,19 +84,19 @@ Cara implementasi
                         //Set Deskripsi Dialog
                         .setMessage("Beri nilai pada aplikasi kami...")
                         
-                        //Menonaktifkan dan mengaktifkan event cancelble / onBackpressed
+                        //Disable or deactive event cancelble / onBackpressed
                         .setCancelable(false)
                         .setPositiveButton("Kirim",  new BottomSheetRating.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                             
-                                 //centerRating.getKomentar() = adalah value dari callback komentar yang diisi
+                                 //centerRating.getKomentar() ( value from callback komentar )
                                 Log.d("MainActivity", "Komentar: "+bottomSheetRating.getKomentar());
                                 
-                                //centerRating.getRating() = adalah value dari callback rating yang diberikan
+                                //centerRating.getRating() = value from callback rating your set
                                 Log.d("MainActivity", "Rating: "+bottomSheetRating.getRating());
                                 
-                                //Menutup Dialog
+                                //Close Dialog
                                 dialogInterface.dismiss();
                             }
                         })
@@ -104,7 +104,7 @@ Cara implementasi
                             @Override
                             public void onClick(DialogInterface dialogInterface, int which) {
                             
-                                 //Menutup Dialog
+                                 //Close Dialog
                                 dialogInterface.dismiss();
                             }
                         })
